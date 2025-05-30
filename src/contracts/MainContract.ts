@@ -55,7 +55,6 @@ export class MainContract implements Contract {
     value: bigint,
     increment_by: number
   ) {
-    console.log("increment_by",increment_by)
     const msg_body = beginCell()
       .storeUint(1, 32)
       .storeUint(increment_by, 32)
