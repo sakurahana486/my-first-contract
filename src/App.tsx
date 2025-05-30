@@ -31,16 +31,16 @@ function App() {
       <div>
         <div className='Card'>
           <b>{WebApp.platform}</b>
-          <b>Our contract Address</b>
-          <div className='Hint'>{contract_address?.slice(0, 30) + "..."}</div>
-          <b>Our contract Balance</b>
+          <b>我的合约地址:</b>
+          <div className='Hint'>{contract_address}</div>
+          <b>我的合约余额：</b>
           {contract_balance && (
             <div className='Hint'>{fromNano(contract_balance)}</div>
           )}
         </div>
 
         <div className='Card'>
-          <b>Counter Value</b>
+          <b>合约中计数器的值：</b>
           <div>{counter_value ?? "Loading..."}</div>
         </div>
 
@@ -49,7 +49,7 @@ function App() {
             showAlert();
           }}
         >
-          Show Alert
+          显示提示
         </a>
 
         <br />
@@ -60,7 +60,7 @@ function App() {
               sendIncrement();
             }}
           >
-            Increment by 5
+            计数器 加 3
           </a>
         )}
 
@@ -72,7 +72,7 @@ function App() {
               sendDeposit();
             }}
           >
-            Request deposit of 1 TON
+            向合约存入 0.8 ton
           </a>
         )}
 
@@ -84,7 +84,7 @@ function App() {
               sendWithdrawalRequest();
             }}
           >
-            Request 0.7 TON withdrawal
+            向合约提取 0.2 ton
           </a>
         )}
       </div>
