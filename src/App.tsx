@@ -72,7 +72,7 @@ function App() {
               sendDeposit();
             }}
           >
-            向合约存入 0.8 ton
+            向合约存入 0.5 ton
           </a>
         )}
 
