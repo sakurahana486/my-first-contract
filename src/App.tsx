@@ -72,7 +72,7 @@ function App() {
               sendDeposit();
             }}
           >
-            向合约存入 0.5 ton
+            向合约存入 1 ton
           </a>
         )}
 
@@ -84,7 +84,7 @@ function App() {
               sendWithdrawalRequest();
             }}
           >
-            向合约提取 0.2 ton
+            向合约提取 0.5 ton
           </a>
         )}
       </div>

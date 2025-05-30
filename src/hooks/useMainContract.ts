@@ -55,13 +55,13 @@ export function useMainContract() {
       return mainContract?.sendIncrement(sender, toNano("0.05"), 3);
     },
     sendDeposit: async () => {
-      return mainContract?.sendDeposit(sender, toNano("0.5"));
+      return mainContract?.sendDeposit(sender, toNano("1"));
     },
     sendWithdrawalRequest: async () => {
       return mainContract?.sendWithdrawalRequest(
         sender,
         toNano("0.05"),
-        toNano("0.2")
+        toNano("0.5")
       );
     },
   };
