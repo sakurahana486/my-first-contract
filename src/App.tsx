@@ -1,9 +1,9 @@
 import "./App.css";
 import { TonConnectButton } from "@tonconnect/ui-react";
-import { useMainContract } from "./hooks/useMainContract";
+import { useMainContract } from "./hooks/useMainContract";//使用我们定义的主合约钩子
 import { useTonConnect } from "./hooks/useTonConnect";
 import { fromNano } from "ton-core";
-import WebApp from "@twa-dev/sdk";
+import WebApp from "@twa-dev/sdk";//导入TG的sdk
 
 function App() {
   const {
@@ -15,10 +15,11 @@ function App() {
     sendIncrement,
     sendDeposit,
     sendWithdrawalRequest,
-  } = useMainContract();
+  } = useMainContract();//主合约钩子返回的内容
 
-  const { connected } = useTonConnect();
+  const { connected } = useTonConnect();//获取ton组件钩子返回的连接状态
 
+  //定义一个在TG中消息提示弹窗的组件
   const showAlert = () => {
     WebApp.showAlert("Hey there!");
   };
@@ -30,7 +31,7 @@ function App() {
       </div>
       <div>
         <div className='Card'>
-          <b>{WebApp.platform}</b>
+          <b>您当前所在操作系统为：{WebApp.platform}（如果不在TG内的话将返回未知）</b>
           <b>我的合约地址:</b>
           <div className='Hint'>{contract_address}</div>
           <b>我的合约余额：</b>
@@ -49,7 +50,7 @@ function App() {
             showAlert();
           }}
         >
-          显示提示
+          仅在TG小程序中能够弹出提示窗
         </a>
 
         <br />

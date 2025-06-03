@@ -4,7 +4,7 @@ import App from "./App";
 import "./index.css";
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 
-// this manifest is used temporarily for development purposes
+// 清单文件，清单文件必选公开
 const manifestUrl =
   "https://raw.githubusercontent.com/sakurahana486/my_first_contract/refs/heads/master/public/tonconnect-manifest.json";
 
