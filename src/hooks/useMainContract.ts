@@ -27,7 +27,7 @@ export function useMainContract() {
   const mainContract = useAsyncInitialize(async () => {
     if (!client) return;
     const contract = new MainContract(
-      Address.parse("EQBlj8efrsZvmLEy28elXbm1Q7OWPXMhWUdy_CL6SsGrl97v")
+      Address.parse("kQCk0Gu4nqQohcldGHzRj50RY7Bk0ZAnCO2abzPcyxFkB17s")
     );
     return client.open(contract) as OpenedContract<MainContract>;
   }, [client]);
